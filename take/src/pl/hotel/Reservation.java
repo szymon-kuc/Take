@@ -1,0 +1,80 @@
+package pl.hotel;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@Entity
+@XmlRootElement
+public class Reservation implements Serializable{
+	private static final long serialVersionUID = 1L;
+	int idc;
+	int worker_id;
+	int client_id;
+	Double price;
+	int room_id;
+	String date_from;
+	String date_to;
+	int service_id;
+
+	
+	@Id
+	@GeneratedValue
+	@XmlAttribute
+	public int getIdc() {
+		return idc;
+	}
+	public void setIdc(int idc) {
+		this.idc = idc;
+	}
+	
+	//dalsze gettery i settery
+	public int getworkerId() {
+		return worker_id;
+	}
+	public void setWorkerId(int worker_id) {
+		this.worker_id = worker_id;
+	}
+	public int getClientId() {
+		return client_id;
+	}
+	public void setClientId(int client_id) {
+		this.client_id = client_id;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public int getRoomId() {
+		return room_id;
+	}
+	public void setRoomId(int room_id) {
+		this.room_id = room_id;
+	}
+	public String getDateFrom() {
+		return date_from;
+	}
+	public void setDateFrom(String date_from) {
+		this.date_from = date_from;
+	}
+	public String getDateTo() {
+		return date_to;
+	}
+	public void setDateTo(String date_to) {
+		this.date_to = date_to;
+	}
+	public int getServiceId() {
+		return client_id;
+	}
+	public void setServiceId(int service_id) {
+		this.service_id = service_id;
+	}
+	
+}
